@@ -35,6 +35,28 @@ group :development, :test do
   gem 'byebug', platform: :mri
 end
 
+# auth
+gem 'devise'
+gem 'cancancan', '~> 1.10'
+gem 'rolify'
+
+# frontend
+gem 'bootstrap-sass'
+gem 'font-awesome-rails'
+gem 'slim-rails'
+gem 'simple_form'
+gem 'bootstrap-generators', group: :development
+gem 'bootsy'
+gem 'react-rails'
+
+# RDF
+gem 'sparql-client'
+gem 'sparql'
+
+# REST
+gem 'faraday'
+gem 'faraday_middleware'
+
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'web-console'
