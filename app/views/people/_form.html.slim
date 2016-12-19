@@ -1,0 +1,27 @@
+= simple_form_for(@person) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :name, label: 'ФИО'
+    = f.input :email, label: 'Электронная почта'
+    = f.input :scopus, label: 'Scopus'
+    / = f.input :impact_story
+    = f.input :google_scholar, label: 'Google Scholar'
+    = f.input :cv, label: 'Ссылка на резюме'
+    = f.input :orcid, label: 'Orcid'
+    = f.input :linkedin, label: 'LinkedIn'
+    = f.input :biography, label: 'Краткая биография'
+    = f.input :google_plus, label: 'Google+'
+    = f.input :room, label: 'Рабочий кабинет'
+    = f.input :laboratory, label: 'Место работы'
+    = f.input :website, label: 'Website'
+    = f.input :github, label: 'GitHub'
+    = f.input :education, label: 'Информация об образовании'
+    = f.input :twitter, label: 'Twitter'
+    = f.input :photo, label: 'Ссылка на фото'
+    = f.input :fb, label: 'Facebook'
+    = f.association :projects, label: 'Проекты'
+    = f.association :publications, label_method: :bib, label: 'Публикации'
+
+  .form-actions
+    = f.button :submit, 'Сохранить', class: 'btn btn-success btn-xs'

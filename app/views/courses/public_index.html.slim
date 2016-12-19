@@ -1,0 +1,14 @@
+- title 'Курсы, читаемые на кафедре'
+
+.page-header
+  h2 Курсы, читаемые на кафедре
+
+table.table.table-hover.table-stripped
+  tbody
+    - @courses.each do |course|
+      tr
+        td
+          span= course.title
+          br
+          = link_to "/courses/#{course.id}", title: 'Подробнее'
+            = fa_icon 'hand-o-right'

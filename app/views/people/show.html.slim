@@ -1,0 +1,88 @@
+- title @person.name
+
+.page-header
+  h1= @person.name
+
+.media
+  .media-left
+    .panel
+      img.img-rounded src="#{@person.photo}" height='200' weight='200'
+    .panel.panel-default
+      .panel-heading
+        h4.panel-title Контакты
+      .panel-body
+        p 
+          i.fa.fa-fw.fa-envelope
+          a href="mailto:#{@person.email}"
+            = @person.email
+        p 
+          i.fa.fa-fw.fa-github
+          a href="https://github.com/#{@person.github}"
+            = @person.github
+        p
+          i.fa.fa-fw.fa-mobile
+          | +7 (123) 456-78-90
+  .media-body
+    .panel.panel-default
+      .panel-heading
+        h4.page-title Научная активность
+      .panel-body
+        ul
+          li
+            | Scopus
+            a href="#"
+              i.fa.fa-fw.fa-external-link
+          li
+            | Academia.edu
+            a href="#"
+              i.fa.fa-fw.fa-external-link
+          li ...
+
+    .panel.panel-default
+      .panel-heading
+        h4.page-title Занятия
+      .panel-body
+        ul
+          li
+            | Интеллектуальный анализ данных
+            a href="/courses/1"
+              i.fa.fa-fw.fa-hand-o-right
+
+    .panel.panel-default
+      .panel-heading
+        h4.page-title Проекты
+      .panel-body
+        ul
+          li
+            | Открытые данные университета ИТМО
+            a href="/project/1"
+              i.fa.fa-fw.fa-hand-o-right
+          li ...
+
+    .panel.panel-default
+      .panel-heading
+        h4.page-title Публикации
+      .panel-body
+        ul
+          li
+            | Radchenko I., Mouromtsev D., Navrotskiy M., Pavlov D. A Case Study of Open Science Concept: Linked Open Data in University // Communications in Computer and Information Science - 2016, Vol. 674, pp. tbd
+            a href="#"
+              i.fa.fa-fw.fa-hand-o-right
+          li
+            | Navrotskiy M., Zhukova N. Scientific portal of university department-shaping research area of users through their behavior // CEUR Workshop Proceedings - 2016, Vol. 1627, pp. 101-110
+            a href="#"
+              i.fa.fa-fw.fa-hand-o-right
+          li
+            | Муромцев Д.И., Леманн Й., Семерханов И.А., Навроцкий М.А., Ермилов И.С. Исследование актуальных способов публикации открытых научных данных в сети // Научно-технический вестник информационных технологий, механики и оптики - 2015. - Т. 15. - № 6(100). - С. 1081-1087
+            a href="#"
+              i.fa.fa-fw.fa-hand-o-right
+          li ...
+
+lobid
+pre= @result.to_yaml
+
+hr
+hr
+
+springer
+pre= @springer_result.to_yaml

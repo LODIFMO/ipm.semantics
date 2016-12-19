@@ -1,0 +1,29 @@
+- title 'Список сотрудников'
+
+.page-header
+  h1 Список сотрудников
+
+p
+  = link_to new_person_path, class: 'btn btn-primary btn-xs', title: 'Добавить сотрудника' do
+    = fa_icon 'fw plus'
+
+table.table.table-bordered.table-hover.table-stripped
+  thead
+    tr
+      th
+      th ФИО
+      th Email
+      th
+      th
+
+  tbody
+    - @people.each do |person|
+      tr
+        td
+          img src="#{person.photo}" style='float: left; margin-right: 20px; margin-bottom: 10px;' height='100px'
+        td = person.name
+        td = person.email
+        td = link_to edit_person_path(person), class: 'btn btn-warning btn-xs', title: 'Изменить' do
+          = fa_icon 'fw pencil'
+        td = link_to person, data: {:confirm => 'Вы уверены, что хотите удалить сотрудника?'}, :method => :delete, class: 'btn btn-danger btn-xs', title: 'Удалить' do
+          = fa_icon 'fw trash'

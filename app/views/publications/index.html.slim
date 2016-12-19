@@ -1,0 +1,24 @@
+- title 'Список публикаций'
+
+.page-header
+  h1 Список публикаций
+
+p
+  = link_to new_publication_path, class: 'btn btn-primary btn-xs', title: 'Добавить публикацию' do
+    = fa_icon 'fw plus'
+
+table.table.table-bordered.table-hover.table-stripped
+  thead
+    tr
+      th
+      th
+      th
+
+  tbody
+    - @publications.each do |publication|
+      tr
+        td = publication.bib
+        td = link_to edit_publication_path(publication), class: 'btn btn-warning btn-xs', title: 'Изменить' do
+          = fa_icon 'fw pencil'
+        td = link_to publication, data: {:confirm => 'Вы уверены, что хотите удалить публикацию?'}, :method => :delete, class: 'btn btn-danger btn-xs', title: 'Удалить' do
+          = fa_icon 'fw trash'

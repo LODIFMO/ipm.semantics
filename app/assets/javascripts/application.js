@@ -13,7 +13,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap-sprockets
-//= require wice_grid
 //= require bootsy
 //= require react
 //= require react_ujs

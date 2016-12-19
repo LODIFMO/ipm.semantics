@@ -1,0 +1,29 @@
+- title 'Список проектов'
+
+.page-header
+  h1 Список проектов
+p
+  = link_to new_project_path, class: 'btn btn-primary btn-xs', title: 'Добавить новый проект' do
+    = fa_icon 'fw plus' 
+
+table.table.table-hover.table-stripped
+  thead
+    tr
+      th Название
+      th Дата начала
+      th Дата окончания
+      th
+      th
+
+  tbody
+    - @projects.each do |project|
+      tr
+        td = project.title
+        td = project.start_date
+        td = project.end_date
+        td 
+          = link_to edit_project_path(project), class: 'btn btn-warning btn-xs', title: 'Изменить' do
+            = fa_icon 'fw pencil'
+        td
+          = link_to project, data: {:confirm => 'Вы уверены, что хотите удалить проект?'}, :method => :delete, class: 'btn btn-danger btn-xs', title: 'Удалить' do
+            = fa_icon 'fw trash'

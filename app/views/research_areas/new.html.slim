@@ -1,0 +1,8 @@
+- title 'Добавить научное направление'
+
+.page-header
+  h1 Добавить научное направление
+
+= react_component('ResearchAreaNew', {areas: @areas.to_a})
+
+= link_to 'Назад', research_areas_path, class: 'btn btn-warning btn-xs'

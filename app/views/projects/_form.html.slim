@@ -1,0 +1,21 @@
+= simple_form_for(@project) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :title, label: 'Название проекта'
+    = f.input :start_date, label: 'Начало проекта'
+    = f.input :end_date, label: 'Завершение проекта'
+    = f.input :short_description, as: :bootsy, :input_html => {:rows => 3}, label: 'Краткое описание проекта'
+    = f.input :full_description, as: :bootsy, :input_html => {:rows => 7}, label: 'Полное описание проекта'
+    = f.input :link, label: 'Ссылка на сайт проекта'
+    = f.input :github, label: 'Ссылка на репозиторий проекта'
+    = f.input :twitter, label: 'Ссылка на Twitter проекта'
+    = f.input :keywords, label: 'Список ключевых слов', placeholder: 'keyword1, keyword2'
+    / = f.input :status
+    / = f.input :name
+    / = f.input :logo
+    / = f.association :people
+    / = f.association :publications,label_method: :bib
+
+  .form-actions
+    = f.button :submit, 'Добавить проект', class: 'btn btn-success btn-xs'

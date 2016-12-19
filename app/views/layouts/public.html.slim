@@ -1,0 +1,73 @@
+doctype html
+html
+  head
+    meta charset='utf-8'
+    meta http-equiv='X-UA-Compatible' content='IE=edge'
+    meta name='viewport' content='width=device-width, initial-scale=1'
+
+    title = "#{yield(:title)} - Кафедра информатики и прикладной математики"
+
+    = stylesheet_link_tag 'application', media: 'all'
+    = stylesheet_link_tag 'ipm', media: 'all'
+    = javascript_include_tag 'application'
+    = csrf_meta_tags
+
+  body
+    .container-fluid#header
+      a href='http://ifmo.ru'
+        | Санкт-Петербургский национальный исследовательский университет информационных технологий, механики и оптики
+
+    .container
+
+      .page-header style='margin-top: 0px;'
+        h2
+          a href='/pages/index' title='Кафедра информатики и прикладной математики' rel='home'
+            | Кафедра информатики и прикладной математики
+          a href='http://www.ifmo.ru/ru/' title='Университет ИТМО' target='_blank'
+            img src="#{asset_path 'logo.png'}" style='float: right; margin-top: -10px;'
+            
+      .navbar.navbar-default.navbar-static-top role='navigation'
+        .container
+          .navbar-header
+            button.navbar-toggle type='button' data-toggle='collapse' data-target='.navbar-collapse'
+              span.sr-only Toggle navigation
+              span.icon-bar
+              span.icon-bar
+              span.icon-bar
+
+          .navbar-collapse.collapse
+            ul.nav.navbar-nav
+              li.menu-item.menu-item-type-post_type.menu-item-object-page.menu-item-40#menu-item-40
+                a href='/pages/abit' Абитуриенту
+              li.menu-item.menu-item-type-post_type.menu-item-object-page.menu-item-83#menu-item-83
+                a href='/pages/student' Студенту
+              li.menu-item.menu-item-type-post_type.menu-item-object-page.menu-item-126#menu-item-126
+                a href='/pages/graduate' Выпускнику
+              li.menu-item
+                a href='/courses' Учебные направления
+              li.menu-item
+                a href='/research_areas' Научные исследования
+              li.menu-item
+                a href='/projects' Проектная деятельность
+              / li.menu-item.menu-item-type-post_type.menu-item-object-page.menu-item-36#menu-item-36
+              /   a href='/pages/staff' Сотрудники
+              li.menu-item.menu-item-type-post_type.menu-item-object-page.menu-item-34#menu-item-34
+                a href='/pages/history' История
+
+      == yield
+
+
+      / hr
+
+    footer.footer#footer
+      .container
+        p.text-muted.text-center
+          a.muted.footer-link href='/pages/contacts' title='Контакты'
+            i.fa.fa-fw.fa-envelope-o
+          a.muted.footer-link href='/admin' title='Войти'
+            i.fa.fa-fw.fa-sign-in
+          a.muted.footer-link href='http://semantics.ifmo.ru' title='Международная лаборатория "Интеллектуальные методы обработки информации и семантические технологии"' target='_blank'
+            i.fa.fa-fw.fa-codepen
+          a.muted.footer-link href='http://abit.ifmo.ru' target='_blank' title='Абитуриент ИТМО'
+            i.fa.fa-fw.fa-info
+

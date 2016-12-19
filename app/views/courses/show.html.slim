@@ -1,0 +1,7 @@
+- if current_user.present?
+  = link_to 'Изменить', edit_course_path(@course), class: 'btn btn-warning'
+
+- title @course.title
+
+- if current_user.present?
+  = react_component 'CoursesShow', @course.attributes

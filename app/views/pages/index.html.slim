@@ -1,0 +1,35 @@
+- title 'Публичные страницы'
+
+.page-header
+  h1 Список страниц
+
+p
+  = link_to new_page_path, class: 'btn btn-primary btn-xs', title: 'Добавить новую страницу' do
+    = fa_icon 'fw plus'
+
+table.table.table-bordered.table-hover.table-stripped
+  thead
+    tr
+      th Имя
+      th Путь
+      th Заголовок
+      th Контент
+      th
+      th
+      th
+
+  tbody
+    - @pages.each do |page|
+      tr
+        td = page.name
+        td = page.path
+        td = page.title
+        td
+          span title='#{page.html}'
+            = page.html.gsub(/(.{40}).+/, '\1...')
+        td = link_to page.path, class: 'btn btn-default btn-xs', target: '_blank', title: 'Показать' do
+          = fa_icon 'fw eye'
+        td = link_to edit_page_path(page), class: 'btn btn-warning btn-xs', title: 'Изменить' do
+          = fa_icon 'fw pencil'
+        td = link_to page, data: {:confirm => 'Вы уверены, что хотите удалить страницу?'}, :method => :delete, class: 'btn btn-danger btn-xs', title: 'Удалить' do
+          = fa_icon 'fw trash'

@@ -1,0 +1,9 @@
+- title "Keyword #{params[:keyword]}"
+
+= react_component 'KeywordShow', {keyword: params[:keyword],
+                                  ou_png: asset_path('ou.png'),
+                                  southampton_png: asset_path('southampton.ico'),
+                                  ou_data: @o,
+                                  ou_a_data: @oa,
+                                  s_data: @s,
+                                  s_a_data: @sa}

@@ -1,0 +1,26 @@
+- title @project.title
+
+.page-header
+  h1
+    = @project.title
+    br
+    small
+      |  Дата начала и окончания работ:
+      = " #{@project.start_date.strftime('%d.%m.%Y')} - #{@project.end_date.strftime('%d.%m.%Y')}"
+
+.panel.panel-default
+  .panel-body
+    .text-justify
+      == @project.full_description
+
+.panel.panel-default
+  .panel-body
+    - @project.keywords.split(',').each do |keyword|
+      a.btn.btn-science-tag.btn-default.btn-science-tag-public href='#'
+        = keyword
+
+.panel.panel-default
+  .panel-body
+    a.btn.btn-science-tag.btn-primary.btn-science-tag-public href="#{@project.link}" Веб сайт
+    a.btn.btn-science-tag.btn-primary.btn-science-tag-public href="#{@project.github}" GitHub
+    a.btn.btn-science-tag.btn-primary.btn-science-tag-public href="#{@project.twitter}" Twitter

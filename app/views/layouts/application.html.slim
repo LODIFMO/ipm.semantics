@@ -1,0 +1,84 @@
+doctype html
+html
+  head
+    meta charset='utf-8'
+    meta http-equiv='X-UA-Compatible' content='IE=edge'
+    meta name='viewport' content='width=device-width, initial-scale=1'
+
+    title = "#{yield(:title)} - Кафедра информатики и прикладной математики"
+
+    = stylesheet_link_tag 'application', media: 'all'
+    = javascript_include_tag 'application'
+    = csrf_meta_tags
+
+  body
+
+    /! Header
+    .navbar.navbar-inverse.navbar-static-top#top-nav
+      .container
+        .navbar-header
+          button.navbar-toggle type='button' data-toggle='collapse' data-target='.navbar-collapse'
+            span.icon-toggle
+          a.navbar-brand href='/' Главная
+        .navbar-collapse.collapse
+          ul.nav.navbar-nav.navbar-right
+            li.dropdown
+              a.dropdown-toggle role='button' data-toggle='dropdown' href='#'
+                i.glyphicon.glyphicon-user
+                  = "  #{current_user.email}"
+                  span.caret
+              ul.dropdown-menu#g-account-menu role='menu'
+                li
+                  a href="/admin/users/#{current_user.id}" Профиль
+                li
+                  = link_to destroy_user_session_path, method: :delete do
+                    i.fa.fa-lock.fa-fw
+                    |  Выйти
+    /! /Header
+    /! Main
+    .container
+       /! upper section
+       .row
+         .col-sm-2
+           h3
+             i.fa.fa-briefcase.fa-fw
+             |  Меню
+           hr
+
+           ul.nav.nav-stacked
+            li
+              a href='/admin/courses'
+                = fa_icon 'file-text fw', text: 'Учебные курсы'
+            li
+              = link_to research_areas_path do
+                = fa_icon 'globe fw', text: 'Научные исследования'
+            li
+              a href='/admin/people'
+                i.fa.fa-graduation-cap.fa-fw
+                |  Сотрудники
+            li
+              a href='/admin/projects'
+                i.fa.fa-file-code-o.fa-fw
+                |  Проекты
+            li
+              a href='/admin/publications'
+                i.fa.fa-book.fa-fw
+                |  Публикации
+            li
+              a href='/admin/pages'
+                i.fa.fa-file-o.fa-fw
+                |  Страницы
+            li
+              a href='/admin/users'
+                i.fa.fa-users.fa-fw
+                |  Пользователи
+           hr
+
+         .col-sm-10
+          == yield
+
+  footer.text-center
+    | This Bootstrap 3 dashboard layout is compliments of
+    a href='http://www.bootply.com/85850'
+      strong  Bootply.com
+

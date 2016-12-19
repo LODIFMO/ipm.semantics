@@ -1,0 +1,10 @@
+.box.box-form
+  = simple_form_for @user do |f|
+    .box-body
+      = f.input :email, label: 'Электронная почта:'
+      = f.input :password, label: 'Пароль', hint: ('Оставьте поле пустым, если вы не хотите изменить пароль' unless @user.new_record?), input_html: {data: {toggle: 'password'}}
+      - if current_user.has_role? :admin
+        = f.input :role_ids, label: 'Роль', as: :select, collection: Role.all, input_html: {multiple: true, size: 10}, col_html: {class: 'col-sm-2'}
+
+    .form-group
+      = f.button :submit, 'Сохранить', class: 'btn-success btn-save btn-xs'
