@@ -164,6 +164,9 @@ GEM
       link_header (~> 0.0, >= 0.0.8)
     rdf-aggregate-repo (2.0.0)
       rdf (~> 2.0)
+    rdf-turtle (2.0.0)
+      ebnf (~> 1.0, >= 1.0.1)
+      rdf (~> 2.0)
     rdf-xsd (2.0.0)
       rdf (~> 2.0)
     react-rails (1.10.0)
@@ -260,6 +263,7 @@ DEPENDENCIES
   pg (~> 0.18)
   puma (~> 3.0)
   rails (~> 5.0.0, >= 5.0.0.1)
+  rdf-turtle
   react-rails
   rolify
   sass-rails (~> 5.0)

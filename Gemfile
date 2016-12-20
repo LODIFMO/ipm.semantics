@@ -52,6 +52,7 @@ gem 'react-rails'
 # RDF
 gem 'sparql-client'
 gem 'sparql'
+gem 'rdf-turtle'
 
 # REST
 gem 'faraday'
