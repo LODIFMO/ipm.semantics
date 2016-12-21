@@ -21,28 +21,32 @@ class @KeywordShow extends React.Component
               ' University of Southampton'
       div {className: 'tab-content'},
         div {className: 'tab-pane active', id: 'ou', role: 'tabpanel'},
-          div {className: 'panel panel-warning'},
-            div {className: 'panel-heading'}, 'Data'
+          div {className: 'panel panel-default'},
             div {className: 'panel-body'},
-              @props.ou_data.map((item, index) =>
-                LodDataItem item: item, key: index
-              )
-          div {className: 'panel panel-info'},
-            div {className: 'panel-heading'}, 'Publications'
-            div {className: 'panel-body'},
-              @props.ou_a_data.map((item, index) =>
-                LodDataItem item: item, key: index
-              )
+              div {className: 'panel panel-warning'},
+                div {className: 'panel-heading'}, 'Data'
+                div {className: 'panel-body'},
+                  @props.ou_data.map((item, index) =>
+                    LodDataItem item: item, key: index
+                  )
+              div {className: 'panel panel-info'},
+                div {className: 'panel-heading'}, 'Publications'
+                div {className: 'panel-body'},
+                  @props.ou_a_data.map((item, index) =>
+                    LodDataItem item: item, key: index
+                  )
         div {className: 'tab-pane', id: 'southampton', role: 'tabpanel'},
-          div {className: 'panel panel-warning'},
-            div {className: 'panel-heading'}, 'Data'
+          div {className: 'panel panel-default'},
             div {className: 'panel-body'},
-              @props.s_data.map((item, index) =>
-                LodDataItem item: item, key: index
-              )
-          div {className: 'panel panel-info'},
-            div {className: 'panel-heading'}, 'Publications'
-            div {className: 'panel-body'},
-              @props.s_a_data.map((item, index) =>
-                LodDataItem item: item, key: index
-              )
+              div {className: 'panel panel-warning'},
+                div {className: 'panel-heading'}, 'Data'
+                div {className: 'panel-body'},
+                  @props.s_data.map((item, index) =>
+                    LodDataItem item: item, key: index
+                  )
+              div {className: 'panel panel-info'},
+                div {className: 'panel-heading'}, 'Publications'
+                div {className: 'panel-body'},
+                  @props.s_a_data.map((item, index) =>
+                    LodDataItem item: item, key: index
+                  )
