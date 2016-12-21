@@ -14,7 +14,7 @@ class KeywordsController < ApplicationController
 
   def ou
     sparql = SPARQL::Client.new('http://data.open.ac.uk/sparql')
-    sparql.query(
+    solutions = sparql.query(
       <<-SPARQL
         SELECT DISTINCT ?think ?description ?type ?label ?url ?title WHERE {
           ?think <http://purl.org/dc/terms/description> ?description .
@@ -25,10 +25,16 @@ class KeywordsController < ApplicationController
           FILTER (regex(str(?description), "#{params[:keyword]}", "i" ))
         }
       SPARQL
-    ).map do |item|
+    )
+
+    results = []
+    object = {}
+    solutions.each do |item|
+      next if item.blank?
+      next if results.map { |r| r[:think] }.include?(item[:think].value)
       url = item[:url].present? ? item[:url].value : ''
       title = item[:title].present? ? item[:title].value : ''
-      {
+      object = {
         think: item[:think].value,
         description: item[:description].value,
         type: item[:type].value,
@@ -36,7 +42,9 @@ class KeywordsController < ApplicationController
         url: url,
         title: title
       }
+      results << object
     end
+    results
   end
 
   def ou_article
