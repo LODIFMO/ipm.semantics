@@ -43,7 +43,7 @@ class KeywordsController < ApplicationController
       }
       results << object
     end
-    results
+    results.sort_by { |item| item[:think] }
   end
 
   def ou_article
@@ -77,7 +77,7 @@ class KeywordsController < ApplicationController
       }
       results << object
     end
-    results
+    results.sort_by { |item| item[:think] }
   end
 
   def southampton
@@ -111,7 +111,7 @@ class KeywordsController < ApplicationController
       }
       results << object
     end
-    results
+    results.sort_by { |item| item[:think] }
   end
 
   def southampton_article
@@ -145,6 +145,6 @@ class KeywordsController < ApplicationController
       }
       results << object
     end
-    results
+    results.sort_by { |item| item[:think] }
   end
 end
