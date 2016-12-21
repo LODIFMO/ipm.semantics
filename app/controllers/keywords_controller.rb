@@ -12,6 +12,18 @@ class KeywordsController < ApplicationController
     render layout: 'public'
   end
 
+  def ou_type(uri)
+    if uri =~ /\/person\//
+      'person'
+    elsif uri =~ /\/podcast\//
+      'podcast'
+    elsif uri =~ /\/project\//
+      'project'
+    else
+      'other'
+    end
+  end
+
   def ou
     sparql = SPARQL::Client.new('http://data.open.ac.uk/sparql')
     solutions = sparql.query(
@@ -39,7 +51,8 @@ class KeywordsController < ApplicationController
         type: item[:type].value,
         label: item[:label].value,
         url: url,
-        title: title
+        title: title,
+        t: ou_type(item[:think].value)
       }
       results << object
     end
@@ -73,7 +86,8 @@ class KeywordsController < ApplicationController
         type: item[:type].value,
         label: item[:label].value,
         url: url,
-        title: title
+        title: title,
+        t: 'publication'
       }
       results << object
     end

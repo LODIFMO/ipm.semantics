@@ -37,31 +37,38 @@ class @KeywordShow extends React.Component
               div {className: 'tab-content'},
                 div {className: 'tab-pane active', id: 'people', role: 'tabpanel'},
                   div {className: 'panel panel-default'},
-                    div {className: 'panel-body'}, 'people'
+                    div {className: 'panel-body'},
+                      @props.ou_data.map((item, index) =>
+                        if item.t is 'person'
+                          LodDataItem item: item, key: index
+                      )
                 div {className: 'tab-pane', id: 'podcasts', role: 'tabpanel'},
                   div {className: 'panel panel-default'},
-                    div {className: 'panel-body'}, 'podcasts'
+                    div {className: 'panel-body'},
+                      @props.ou_data.map((item, index) =>
+                        if item.t is 'podcast'
+                          LodDataItem item: item, key: index
+                      )
                 div {className: 'tab-pane', id: 'projects', role: 'tabpanel'},
                   div {className: 'panel panel-default'},
-                    div {className: 'panel-body'}, 'projects'
+                    div {className: 'panel-body'},
+                      @props.ou_data.map((item, index) =>
+                        if item.t is 'project'
+                          LodDataItem item: item, key: index
+                      )
                 div {className: 'tab-pane', id: 'publications', role: 'tabpanel'},
                   div {className: 'panel panel-default'},
-                    div {className: 'panel-body'}, 'publications'
+                    div {className: 'panel-body'},
+                      @props.ou_data.map((item, index) =>
+                        LodDataItem item: item, key: index
+                      )
                 div {className: 'tab-pane', id: 'others', role: 'tabpanel'},
                   div {className: 'panel panel-default'},
-                    div {className: 'panel-body'}, 'Other'
-              div {className: 'panel panel-warning'},
-                div {className: 'panel-heading'}, 'Data'
-                div {className: 'panel-body'},
-                  @props.ou_data.map((item, index) =>
-                    LodDataItem item: item, key: index
-                  )
-              div {className: 'panel panel-info'},
-                div {className: 'panel-heading'}, 'Publications'
-                div {className: 'panel-body'},
-                  @props.ou_a_data.map((item, index) =>
-                    LodDataItem item: item, key: index
-                  )
+                    div {className: 'panel-body'},
+                      @props.ou_data.map((item, index) =>
+                        if item.t is 'other'
+                          LodDataItem item: item, key: index
+                      )
         div {className: 'tab-pane', id: 'southampton', role: 'tabpanel'},
           div {className: 'panel panel-default'},
             div {className: 'panel-body'},
