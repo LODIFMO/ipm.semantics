@@ -10,7 +10,8 @@ class @OpenUniversityDataItem extends React.Component
         dd {},
           a {href: @props.item.think}, @props.item.think
         dt {}, 'description'
-        dd {}, @props.item.description
+        dd {},
+          div {dangerouslySetInnerHTML: {__html: @props.item.description}},
         dt {}, 'type'
         dd {},
           a {href: @props.item.type}, @props.item.type
