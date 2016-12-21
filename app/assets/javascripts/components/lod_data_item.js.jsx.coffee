@@ -1,5 +1,5 @@
 {dl, dt, dd, a, div} = React.DOM
-class @OpenUniversityDataItem extends React.Component
+class @LodDataItem extends React.Component
   constructor: (props) ->
     super props
 

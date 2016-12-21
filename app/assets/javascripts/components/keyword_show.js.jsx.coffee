@@ -5,7 +5,7 @@ class @KeywordShow extends React.Component
     super props
 
   render: ->
-    OpenUniversityDataItem = React.createFactory(window.OpenUniversityDataItem)
+    LodDataItem = React.createFactory(window.LodDataItem)
     div {className: 'container'},
       div {className: 'page-header'},
         h1 {}, @props.keyword
@@ -25,24 +25,24 @@ class @KeywordShow extends React.Component
             div {className: 'panel-heading'}, 'Data'
             div {className: 'panel-body'},
               @props.ou_data.map((item, index) =>
-                OpenUniversityDataItem item: item, key: index
+                LodDataItem item: item, key: index
               )
           div {className: 'panel panel-info'},
             div {className: 'panel-heading'}, 'Publications'
             div {className: 'panel-body'},
               @props.ou_a_data.map((item, index) =>
-                OpenUniversityDataItem item: item, key: index
+                LodDataItem item: item, key: index
               )
         div {className: 'tab-pane', id: 'southampton', role: 'tabpanel'},
           div {className: 'panel panel-warning'},
             div {className: 'panel-heading'}, 'Data'
             div {className: 'panel-body'},
               @props.s_data.map((item, index) =>
-                OpenUniversityDataItem item: item, key: index
+                LodDataItem item: item, key: index
               )
           div {className: 'panel panel-info'},
             div {className: 'panel-heading'}, 'Publications'
             div {className: 'panel-body'},
               @props.s_a_data.map((item, index) =>
-                OpenUniversityDataItem item: item, key: index
+                LodDataItem item: item, key: index
               )
