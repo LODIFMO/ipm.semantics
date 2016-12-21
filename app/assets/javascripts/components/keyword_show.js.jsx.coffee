@@ -23,6 +23,33 @@ class @KeywordShow extends React.Component
         div {className: 'tab-pane active', id: 'ou', role: 'tabpanel'},
           div {className: 'panel panel-default'},
             div {className: 'panel-body'},
+              ul {className: 'nav nav-tabs', role: 'tablist'},
+                li {role: 'presentation', className: 'active'},
+                  a {href: '#people', 'aria-controls': 'html', role: 'tab', 'data-toggle': 'tab'}, 'People'
+                li {role: 'presentation'},
+                  a {href: '#podcasts', 'aria-controls': 'html', role: 'tab', 'data-toggle': 'tab'}, 'Podcasts'
+                li {role: 'presentation'},
+                  a {href: '#projects', 'aria-controls': 'html', role: 'tab', 'data-toggle': 'tab'}, 'Projects'
+                li {role: 'presentation'},
+                  a {href: '#publications', 'aria-controls': 'html', role: 'tab', 'data-toggle': 'tab'}, 'Publications'
+                li {role: 'presentation'},
+                  a {href: '#others', 'aria-controls': 'html', role: 'tab', 'data-toggle': 'tab'}, 'Others'
+              div {className: 'tab-content'},
+                div {className: 'tab-pane active', id: 'people', role: 'tabpanel'},
+                  div {className: 'panel panel-default'},
+                    div {className: 'panel-body'}, 'people'
+                div {className: 'tab-pane', id: 'podcasts', role: 'tabpanel'},
+                  div {className: 'panel panel-default'},
+                    div {className: 'panel-body'}, 'podcasts'
+                div {className: 'tab-pane', id: 'projects', role: 'tabpanel'},
+                  div {className: 'panel panel-default'},
+                    div {className: 'panel-body'}, 'projects'
+                div {className: 'tab-pane', id: 'publications', role: 'tabpanel'},
+                  div {className: 'panel panel-default'},
+                    div {className: 'panel-body'}, 'publications'
+                div {className: 'tab-pane', id: 'others', role: 'tabpanel'},
+                  div {className: 'panel panel-default'},
+                    div {className: 'panel-body'}, 'Other'
               div {className: 'panel panel-warning'},
                 div {className: 'panel-heading'}, 'Data'
                 div {className: 'panel-body'},
