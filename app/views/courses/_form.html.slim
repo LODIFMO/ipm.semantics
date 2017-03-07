@@ -18,8 +18,8 @@
               .panel-body
                 = tag_form.text_field :word, class: 'form-control', placeholder: 'Термин курса'
               .panel-footer
-                = tag_form.link_to_remove 'Удалить термин', class: 'btn btn-danger'
-          p= f.link_to_add 'Добавить термин', :course_tags, class: 'btn btn-default'
+                = tag_form.link_to_remove 'Удалить термин', class: 'btn btn-danger btn-xs'
+          p= f.link_to_add 'Добавить термин', :course_tags, class: 'btn btn-default btn-xs'
 
   .form-actions
     = f.button :submit, 'Сохранить', class: 'btn btn-success btn-xs'
