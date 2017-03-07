@@ -54,7 +54,27 @@ html
               li.menu-item.menu-item-type-post_type.menu-item-object-page.menu-item-34#menu-item-34
                 a href='/pages/history' История
 
-      == yield
+      .row
+        .col-md-10.col-xs-10.col-sm-10 style='text-align: justify'
+          .panel.panel-default
+            .panel-body
+              == yield
+        .col-md-2.col-xs-2.col-sm-2
+          .panel.panel-default
+            .panel-heading
+              .panel-title Внешние ссылки
+            .panel-body
+              ul.nav.nav-pills.nav-stacked
+                li
+                  a href='#' Коллоквиумы
+                li
+                  a href='#' Новости
+                li
+                  a href='https://gentle-savannah-36525.herokuapp.com' Вики
+                li
+                  a href='#' Словарь
+                li
+                  a href='https://rus-lod.herokuapp.com' Открытые данные
 
 
       / hr

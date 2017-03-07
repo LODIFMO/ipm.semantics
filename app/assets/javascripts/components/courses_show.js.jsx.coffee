@@ -8,7 +8,7 @@ class @CoursesShow extends React.Component
 
   render: ->
     CourseKeyword = React.createFactory(window.CourseKeyword)
-    div {className: 'container'},
+    div {className: ''},
       div {className: 'page-header'},
         h1 {}, @props.title
       div {className: 'panel panel-default'},
