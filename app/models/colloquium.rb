@@ -1,0 +1,2 @@
+class Colloquium < ApplicationRecord
+end
