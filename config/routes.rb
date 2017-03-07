@@ -9,6 +9,7 @@ Rails.application.routes.draw do
     resources :users, except: :show
     resources :courses, except: :show
     resources :research_areas, only: %i(index new destroy create)
+    resources :colloquia, except: :show
   end
 
   scope 'api' do
