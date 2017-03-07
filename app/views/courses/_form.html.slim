@@ -5,7 +5,6 @@
     = f.input :title, label: 'Название'
     = f.input :description, as: :bootsy, :input_html => {:rows => 30}, label: 'Описание'
     .form-group
-      = react_component 'CourseTag', {tags: @course.course_tags}
 
   .form-actions
     = f.button :submit, 'Сохранить', class: 'btn btn-success btn-xs'

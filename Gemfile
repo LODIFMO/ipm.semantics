@@ -50,6 +50,7 @@ gem 'simple_form'
 gem 'bootstrap-generators', group: :development
 gem 'bootsy'
 gem 'react-rails'
+gem 'nested_form'
 
 # RDF
 gem 'sparql-client'
