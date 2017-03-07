@@ -4,4 +4,4 @@
 - title @course.title
 
 - if current_user.present?
-  = react_component 'CoursesShow', @course.attributes
+  = react_component 'CoursesShow', @course.to_react

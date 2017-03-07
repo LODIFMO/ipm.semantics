@@ -11,7 +11,7 @@ class @CourseKeyword extends React.Component
   handleAjax: ->
     axios.get('/api/v1/courses/keyword',{
     params: {
-        keyword: @props.item
+        keyword: @props.item.word
       }
     })
     .then((response) => @setState(text: response.data.description))
@@ -23,5 +23,5 @@ class @CourseKeyword extends React.Component
       a {
         className: 'btn btn-science-tag btn-default btn-science-tag-public btn-xs',
         title: text,
-        href: "search/keywords/#{encodeURI(@props.item)}"
-      }, @props.item
+        href: "search/keywords/#{encodeURI(@props.item.word)}"
+      }, @props.item.word
