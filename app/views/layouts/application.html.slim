@@ -53,6 +53,9 @@ html
               = link_to research_areas_path do
                 = fa_icon 'globe fw', text: 'Научные исследования'
             li
+              = link_to '#' do
+                = fa_icon 'file-pdf-o fw', text: 'Коллоквиум'
+            li
               a href='/admin/people'
                 i.fa.fa-graduation-cap.fa-fw
                 |  Сотрудники
@@ -66,7 +69,7 @@ html
                 |  Публикации
             li
               a href='/admin/pages'
-                i.fa.fa-file-o.fa-fw
+                i.fa.fa-html5.fa-fw
                 |  Страницы
             li
               a href='/admin/users'
