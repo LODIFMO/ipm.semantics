@@ -1,10 +1,25 @@
-= simple_form_for(@course) do |f|
+= simple_nested_form_for(@course) do |f|
   = f.error_notification
 
   .form-inputs
-    = f.input :title, label: 'Название'
-    = f.input :description, as: :bootsy, :input_html => {:rows => 30}, label: 'Описание'
+    .panel.panel-default
+      .panel-heading
+        .panel-title Данные о курсе
+      .panel-body
+        = f.input :title, label: 'Название'
+        = f.input :description, as: :bootsy, :input_html => {:rows => 30}, label: 'Описание'
     .form-group
+      .panel.panel-default
+        .panel-heading
+          .panel-title Список терминов курса
+        .panel-body
+          = f.fields_for :course_tags do |tag_form|
+            .panel.panel-warning
+              .panel-body
+                = tag_form.text_field :word, class: 'form-control', placeholder: 'Термин курса'
+              .panel-footer
+                = tag_form.link_to_remove 'Удалить термин', class: 'btn btn-danger'
+          p= f.link_to_add 'Добавить термин', :course_tags, class: 'btn btn-default'
 
   .form-actions
     = f.button :submit, 'Сохранить', class: 'btn btn-success btn-xs'
