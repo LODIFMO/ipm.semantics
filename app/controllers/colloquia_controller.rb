@@ -6,6 +6,12 @@ class ColloquiaController < ApplicationController
     @colloquia = Colloquium.all.order(:day)
   end
 
+  def public_index
+    @colloquium = Colloquium.order(:day).last
+
+    render :show, layout: 'public'
+  end
+
   def show
     render layout: 'public'
   end

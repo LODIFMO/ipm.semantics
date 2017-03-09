@@ -38,6 +38,7 @@ Rails.application.routes.draw do
   get '/projects/:id' => 'projects#show', constraints: {id: /[0-9]+/}
 
   # colloquia - public
+  get '/colloquia' => 'colloquia#public_index'
   get '/colloquia/:id' => 'colloquia#show', constraints: {id: /[0-9]+/}
 
   get '/admin' => 'pages#index'
