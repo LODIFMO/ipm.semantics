@@ -1,0 +1,31 @@
+- title 'Список новостей'
+
+.page-header
+  h1 Список новостей
+
+p
+  = link_to '/admin/news/new', class: 'btn btn-primary btn-xs', title: 'Добавить' do
+    = fa_icon 'fw plus'
+
+table.table.table-bordered.table-hover.table-striped
+  thead
+    tr
+      th
+      th
+      th
+      th
+      th
+      th
+  
+  tbody
+    - @news.each do |n|
+      tr
+        td = n.id
+        td = n.title
+        td = n.created_at
+        td = link_to "/news/#{n.id}", class: 'btn btn-info btn-xs', title: 'Показать' do
+          = fa_icon 'fw eye'
+        td = link_to "/admin/news/#{n.id}/edit", class: 'btn btn-warning btn-xs', title: 'Изменить' do
+          = fa_icon 'fw pencil'
+        td = link_to "/admin/news/#{n.id}", data: {:confirm => 'Вы уверены, что хотите удалить?'}, :method => :delete, class: 'btn btn-danger btn-xs', title: 'Удалить' do
+          = fa_icon 'fw trash'
