@@ -23,6 +23,14 @@ class NewsController < ApplicationController
   def edit
   end
 
+  def update
+    if @news.update(news_params)
+      redirect_to '/admin/news', notice: 'News was successfully updated.'
+    else
+      render :edit
+    end
+  end
+
   private
 
   def news_params
