@@ -30,6 +30,9 @@ class ColloquiaController < ApplicationController
     end
   end
 
+  def edit
+  end
+
   def destroy
     @colloquium.destroy
     redirect_to colloquia_path, notice: 'Colloquium was successfully destroyed.'
