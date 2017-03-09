@@ -10,6 +10,7 @@ Rails.application.routes.draw do
     resources :courses, except: :show
     resources :research_areas, only: %i(index new destroy create)
     resources :colloquia, except: :show
+    resources :news, except: :show
   end
 
   scope 'api' do
@@ -40,6 +41,10 @@ Rails.application.routes.draw do
   # colloquia - public
   get '/colloquia' => 'colloquia#public_index'
   get '/colloquia/:id' => 'colloquia#show', constraints: {id: /[0-9]+/}
+
+  # news - public
+  get '/news' => 'news#public_index'
+  get 'news/:id' => 'news#show', constraints: {id: /[0-9]+/}
 
   get '/admin' => 'pages#index'
 
