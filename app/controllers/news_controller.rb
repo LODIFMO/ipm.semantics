@@ -6,6 +6,10 @@ class NewsController < ApplicationController
     @news = News.all.order(created_at: :desc)
   end
 
+  def public_index
+    @news = News.all.order(created_at: :desc)
+  end
+
   def new
     @news = News.new
   end

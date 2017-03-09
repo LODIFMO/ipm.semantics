@@ -1,0 +1,14 @@
+- title 'Новости'
+
+.page-header
+  h2 Новости
+
+- @news.each do |n|
+  .panel.panel-default
+    .panel-heading
+      .panel-title= n.title
+    .panel-body== n.body
+    .panel-footer
+      p
+        small= n.created_at
+      p= link_to 'Подробнее', "/news/#{n.id}", class: 'btn btn-info btn-xs'
