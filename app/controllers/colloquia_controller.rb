@@ -6,6 +6,10 @@ class ColloquiaController < ApplicationController
     @colloquia = Colloquium.all.order(:day)
   end
 
+  def show
+    render layout: 'public'
+  end
+
   def new
     @colloquium = Colloquium.new
   end

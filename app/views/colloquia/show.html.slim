@@ -1,0 +1,17 @@
+- if current_user.present?
+  = link_to 'Изменить', edit_colloquium_path(@colloquium), class: 'btn btn-warning'
+
+- title @colloquium.title
+
+.page-header
+  h1
+    = @colloquium.title
+    br
+    small
+      |  Дата проведения
+      = " #{@colloquium.day}"
+
+.panel.panel-default
+  .panel-body
+    .text-justify
+      == @colloquium.body
