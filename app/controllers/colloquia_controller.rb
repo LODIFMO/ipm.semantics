@@ -33,6 +33,14 @@ class ColloquiaController < ApplicationController
   def edit
   end
 
+  def update
+    if @colloquium.update(colloquium_params)
+      redirect_to colloquia_path, notice: 'colloquium was successfully updated.'
+    else
+      redner :edit
+    end
+  end
+
   def destroy
     @colloquium.destroy
     redirect_to colloquia_path, notice: 'Colloquium was successfully destroyed.'
