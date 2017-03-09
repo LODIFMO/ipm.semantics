@@ -23,5 +23,6 @@ class @CourseKeyword extends React.Component
       a {
         className: 'btn btn-science-tag btn-default btn-science-tag-public btn-xs',
         title: text,
-        href: "search/keywords/#{encodeURI(@props.item.word)}"
+        href: "http://gentle-savannah-36525.herokuapp.com/pages/show?keyword=#{encodeURI(@props.item.word)}",
+        target: '_blank'
       }, @props.item.word
