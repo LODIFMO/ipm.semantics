@@ -1,0 +1,12 @@
+- title 'Изменить новость'
+
+.page-header
+  h1 Изменить новость
+
+p== render 'form'
+
+.row
+  .col-sm-1
+    = link_to 'Назад', '/admin/news', class: 'btn btn-warning btn-xs'
+  .col-sm-11
+    = link_to 'Показать', "/news/#{@news.id}", class: 'btn btn-info btn-xs'
