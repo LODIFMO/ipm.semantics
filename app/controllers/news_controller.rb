@@ -31,6 +31,11 @@ class NewsController < ApplicationController
     end
   end
 
+  def destroy
+    @news.destroy
+    redirect_to '/admin/news', notice: 'News was successfully destroyed.'
+  end
+
   private
 
   def news_params
