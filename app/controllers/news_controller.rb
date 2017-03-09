@@ -10,6 +10,10 @@ class NewsController < ApplicationController
     @news = News.new
   end
 
+  def show
+    render layout: 'public'
+  end
+
   def create
     @news = News.new news_params
 
