@@ -53,6 +53,7 @@ ActiveRecord::Schema.define(version: 20170309101049) do
 
   create_table "news", force: :cascade do |t|
     t.string   "title"
+    t.text     "short_body"
     t.text     "body"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
