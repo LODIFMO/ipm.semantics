@@ -1,0 +1,15 @@
+= simple_form_for(@colloquium) do |f|
+  - if f.error_notification
+    .panel.panel-danger
+      .panel-body
+        = f.error_notification
+  
+  .panel.panel-default
+    .panel-body
+      .form-inputs
+        = f.input :title, label: 'Название'
+        = f.input :day, label: 'Дата проведения'
+        = f.input :body, as: :bootsy, input_html: {rows: 30}, label: 'Описание'
+      
+      .form-actions
+        = f.button :submit, 'Сохранить', class: 'btn btn-success btn-xs'

@@ -3,7 +3,7 @@ class CreateColloquia < ActiveRecord::Migration[5.0]
     create_table :colloquia do |t|
       t.string :title
       t.text :body
-      t.date :day
+      t.datetime :day
       t.timestamps
     end
   end
