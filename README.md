@@ -1,24 +1,17 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Cloud9 commands for develop env
 
-Things you may want to cover:
+use this command in bash tab.
 
-* Ruby version
+run database (postgresql):
+`sudo service postgresql start`
 
-* System dependencies
+run project:
+`rails s -p $PORT -b $IP`
 
-* Configuration
+install deps:
+`bundle install`
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+run migration:
+`rake db:migrate`
