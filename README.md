@@ -15,3 +15,6 @@ install deps:
 
 run migration:
 `rake db:migrate`
+
+run seeds:
+`rake db:seed`
