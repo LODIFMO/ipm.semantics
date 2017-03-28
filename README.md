@@ -18,3 +18,9 @@ run migration:
 
 run seeds:
 `rake db:seed`
+
+For run project:
+
+1. run db
+2. run project
+3. open link
