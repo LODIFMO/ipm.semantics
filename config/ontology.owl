@@ -1,0 +1,532 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/nabijon/ontologies/2017/4/untitled-ontology-22"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     ontologyIRI="http://www.semanticweb.org/nabijon/ontologies/2017/4/untitled-ontology-22">
+    <Prefix name="" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#Colloquia"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Cources"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#News"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Pages"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#People"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Projects"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Publications"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Research_areas"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#bib"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#body"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#day"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#description"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#end_date"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#full_description"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#github"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#html"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#link"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#logo"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#name"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#path"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#people"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#projects"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#short_body"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#short_description"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#start_date"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#status"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#title"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#twitter"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#biography"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#cv"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#education"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#email"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#fb"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#github"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#google_plus"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#laboratory"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#linkedin"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#name"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#photo"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#projects"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#publications"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#twitter"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#website"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Administrator"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Student"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Teacher"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class IRI="#People"/>
+        <NamedIndividual IRI="#Administrator"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#People"/>
+        <NamedIndividual IRI="#Student"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#People"/>
+        <NamedIndividual IRI="#Teacher"/>
+    </ClassAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#publications"/>
+        <NamedIndividual IRI="#Teacher"/>
+        <Literal datatypeIRI="&xsd;Name">Open Source</Literal>
+    </DataPropertyAssertion>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#people"/>
+    </IrreflexiveObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#bib"/>
+        <Class IRI="#Publications"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#body"/>
+        <Class IRI="#Colloquia"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#body"/>
+        <Class IRI="#Cources"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#day"/>
+        <Class IRI="#Colloquia"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#description"/>
+        <Class IRI="#Cources"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#end_date"/>
+        <Class IRI="#Projects"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#full_description"/>
+        <Class IRI="#Projects"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#github"/>
+        <Class IRI="#Projects"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#html"/>
+        <Class IRI="#News"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#link"/>
+        <Class IRI="#Projects"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#logo"/>
+        <Class IRI="#Projects"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#name"/>
+        <Class IRI="#Pages"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#name"/>
+        <Class IRI="#People"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#path"/>
+        <Class IRI="#Pages"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#people"/>
+        <Class IRI="#Publications"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#projects"/>
+        <Class IRI="#Publications"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#short_body"/>
+        <Class IRI="#Cources"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#short_description"/>
+        <Class IRI="#Projects"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#start_date"/>
+        <Class IRI="#Projects"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#status"/>
+        <Class IRI="#Projects"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#title"/>
+        <Class IRI="#Colloquia"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#title"/>
+        <Class IRI="#Cources"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#title"/>
+        <Class IRI="#News"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#title"/>
+        <Class IRI="#Pages"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#title"/>
+        <Class IRI="#Projects"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#twitter"/>
+        <Class IRI="#Projects"/>
+    </ObjectPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#biography"/>
+        <Class IRI="#People"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#cv"/>
+        <Class IRI="#People"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#education"/>
+        <Class IRI="#People"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#email"/>
+        <Class IRI="#People"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#fb"/>
+        <Class IRI="#People"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#github"/>
+        <Class IRI="#People"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#google_plus"/>
+        <Class IRI="#People"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#laboratory"/>
+        <Class IRI="#People"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#linkedin"/>
+        <Class IRI="#People"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#name"/>
+        <Class IRI="#People"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#photo"/>
+        <Class IRI="#People"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#projects"/>
+        <Class IRI="#People"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#publications"/>
+        <Class IRI="#People"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#twitter"/>
+        <Class IRI="#People"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#website"/>
+        <Class IRI="#People"/>
+    </DataPropertyDomain>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Teacher</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Преподователь</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#bib</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Ссылка</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#biography</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Краткая биография</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#body</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Описание коллоквиум
+</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#body</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Текст новости</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#cv</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Ссылка на резюме</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#day</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Дата проведения</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#description</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Описание</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#education</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Информация об образовании</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#email</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Электронная почта</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#end_date</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Завершение проекта</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#fb</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Facebook</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#full_description</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Полное описание проекта</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#github</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">GitHub</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#github</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Ссылка на репозиторий проекта</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#google_plus</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Google+</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#html</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Исходный код</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#laboratory</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Место работы</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#link</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Ссылка на сайт проекта</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#linkedin</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">LinkedIn</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#name</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Название</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#name</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">ФИО</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#path</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Путь</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#people</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Авторы</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#photo</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Ссылка на фото</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#projects</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Проекты</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#publications</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Публикации</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#short_body</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Короткий текст</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#short_description</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Краткое описание проекта</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#start_date</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Начало проекта</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#title</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Заголовок</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#title</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Название</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#title</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Название проекта</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#twitter</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Twitter</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#twitter</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Ссылка на Twitter проекта</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#website</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Website</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+
